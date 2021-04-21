@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'novo-diretivas';
+
+  lembrete: string;
+  lembretes: Array<string>=[];
+
+  salvar() {
+    this.lembretes=[this.lembrete, ...this.lembretes];
+    this.lembrete='';
+  }
 }
